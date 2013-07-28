@@ -7,3 +7,5 @@
 
 build
 .gradle
+out
+.idea/workspace.xml
