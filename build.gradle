@@ -20,6 +20,7 @@
         exclude group: 'log4j'
         exclude module: 'junit-dep'
         exclude module: 'hamcrest-core'
+        exclude module: 'slf4j-nop'
     }
 
     apply plugin: 'project-report'

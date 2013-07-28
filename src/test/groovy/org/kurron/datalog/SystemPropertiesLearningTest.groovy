@@ -1,23 +1,29 @@
 package org.kurron.datalog
 
 import spock.lang.Specification
+import static datomic.Peer.q
 
 /**
  * Learning test to see how Datalog can be used to query the System properties object (a map).
  */
 class SystemPropertiesLearningTest extends Specification {
 
-    def 'bob'( def builder, def unimportant )
+    def 'try various queries'( def query, def input )
     {
-        given: 'a JSON serializer'
+        given: 'a query and some input'
+        assert query != null
+        assert input != null
 
-        when: 'an object is serialized into JSON'
+        when: 'the query is applied'
+        def results = q( query, input )
 
-        then: 'printout JSON'
+        then: 'the results are printed'
+        println "results = $results"
         true
 
         where:
-        builder                         |  unimportant
-        'bob'                           | 'bob'
+        query                         | input
+        // find all properties
+        '[:find ?k :in [[?k]]]'       | System.properties
     }
 }
