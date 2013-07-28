@@ -22,8 +22,8 @@ class SystemPropertiesLearningTest extends Specification {
         true
 
         where:
-        query                         | input
-        // find all properties
-        '[:find ?k :in [[?k]]]'       | System.properties
+        query                          | input
+        '[:find ?k :in [[?k]]]'        | System.properties
+        '[:find ?k ?v :in [[?k ?v]] ]' | System.properties
     }
 }
