@@ -26,4 +26,55 @@ class SystemPropertiesLearningTest extends Specification {
         '[:find ?key :in [[?key]]]'                | System.properties
         '[:find ?key ?value :in [[?key ?value]] ]' | System.properties
     }
+
+    def 'Which system properties are path-related?'()
+    {
+        given: 'a query and some input'
+        def query = '''[:find ?key ?value
+                        :in [[?key ?value]]
+                        :where [(.endsWith ?key "path")]]'''
+        def input = System.properties
+
+        when: 'the query is applied'
+        def results = q( query, input )
+
+        then: 'the results are printed'
+        println "results = $results"
+        true
+    }
+
+    def 'What path elements are mentioned in system properties?'()
+    {
+        given: 'a query and some input'
+        def query = '''[:find ?pathElem
+                        :in [[?key ?value]]
+                        :where [(.endsWith ?key "path")]
+                               [(.split ?value ":") [?pathElem ...]]]'''
+        def input = System.properties
+
+        when: 'the query is applied'
+        def results = q( query, input )
+
+        then: 'the results are printed'
+        println "results = $results"
+        true
+    }
+
+    def 'What JAR files are in my system property paths?'()
+    {
+        given: 'a query and some input'
+        def query = '''[:find ?pathElem
+                        :in [[?key ?value]]
+                        :where [(.endsWith ?key "path")]
+                               [(.split ?value ":") [?pathElem ...]]
+                               [(.endsWith ?pathElem ".jar")]]'''
+        def input = System.properties
+
+        when: 'the query is applied'
+        def results = q( query, input )
+
+        then: 'the results are printed'
+        println "results = $results"
+        true
+    }
 }
