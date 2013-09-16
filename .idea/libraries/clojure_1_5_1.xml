@@ -6,6 +6,7 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/artifacts-26/filestore/org.clojure/clojure/1.5.1/source/5c8e650b03ed0f000d7399cfcb03771a00b9dcd5/clojure-1.5.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/artifacts-26/filestore/org.clojure/clojure/1.5.1/source/5c8e650b03ed0f000d7399cfcb03771a00b9dcd5/clojure-1.5.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

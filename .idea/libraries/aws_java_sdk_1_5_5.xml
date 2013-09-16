@@ -6,6 +6,7 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/artifacts-26/filestore/com.amazonaws/aws-java-sdk/1.5.5/source/7dad7ddca6e3a5ce59519e5ec491873f92686654/aws-java-sdk-1.5.5-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/artifacts-26/filestore/com.amazonaws/aws-java-sdk/1.5.5/source/7dad7ddca6e3a5ce59519e5ec491873f92686654/aws-java-sdk-1.5.5-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
