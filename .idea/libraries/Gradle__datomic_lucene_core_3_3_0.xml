@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: datomic-lucene-core-3.3.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.datomic/datomic-lucene-core/3.3.0/8b053ec11455ff1300a7a878c5e659d411f94b8e/datomic-lucene-core-3.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.datomic/datomic-lucene-core/3.3.0/8b053ec11455ff1300a7a878c5e659d411f94b8e/datomic-lucene-core-3.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
