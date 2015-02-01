@@ -24,6 +24,7 @@
     }
 
     apply plugin: 'groovy'
+    apply plugin: 'idea'
 
     defaultTasks 'clean', 'build'
 
