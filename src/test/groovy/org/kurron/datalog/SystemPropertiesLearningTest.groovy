@@ -8,7 +8,7 @@ import static datomic.Peer.q
  */
 class SystemPropertiesLearningTest extends Specification {
 
-    def 'try various queries'( def query, def input )
+    def 'try various queries'( String query, Properties input )
     {
         given: 'a query and some input'
         assert query != null
@@ -18,8 +18,9 @@ class SystemPropertiesLearningTest extends Specification {
         def results = q( query, input )
 
         then: 'the results are printed'
-        println "results = $results"
-        true
+        results.each {
+            println it
+        }
 
         where:
         query                                      | input
@@ -39,8 +40,9 @@ class SystemPropertiesLearningTest extends Specification {
         def results = q( query, input )
 
         then: 'the results are printed'
-        println "results = $results"
-        true
+        results.each {
+            println it
+        }
     }
 
     def 'What path elements are mentioned in system properties?'()
@@ -56,8 +58,9 @@ class SystemPropertiesLearningTest extends Specification {
         def results = q( query, input )
 
         then: 'the results are printed'
-        println "results = $results"
-        true
+        results.each {
+            println it
+        }
     }
 
     def 'What JAR files are in my system property paths?'()
@@ -74,7 +77,8 @@ class SystemPropertiesLearningTest extends Specification {
         def results = q( query, input )
 
         then: 'the results are printed'
-        println "results = $results"
-        true
+        results.each {
+            println it
+        }
     }
 }
